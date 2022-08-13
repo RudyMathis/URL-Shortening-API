@@ -1,0 +1,173 @@
+:root {
+	--Blue-500: hsl(180, 66%, 49%);
+	--Blue-700: hsl(255, 11%, 22%);
+	--Purple-400: hsl(257, 7%, 63%);
+	--Purple-700: hsl(257, 27%, 26%);
+	--Purple-900: hsl(260, 8%, 14%);
+	--Red-400: hsl(0, 87%, 67%);
+
+	--Neutral-100: hsl(0, 0%, 100%);
+	--Neutral-200: hsl(0, 0%, 90%);
+	--Neutral-300: hsl(0, 0%, 75%);
+
+	--Font-Weight-500: 500;
+	--Font-Weight-700: 700;
+	font-size: 18px;
+
+	--Em-100: 0.25em;
+	--Em-300: 0.5em;
+	--Em-500: 1em;
+	--Em-700: 1.5em;
+	--Em-900: 2em;
+
+	--Rem-200: 0.5rem;
+	--Rem-400: 1rem;
+	--Rem-600: 1.5rem;
+	--Rem-800: 2rem;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+/* Component */
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: var(--Em-500);
+}
+
+nav {
+}
+
+.hamburger-menu {
+	cursor: pointer;
+}
+
+.hamburger-wrapper {
+}
+
+main {
+	padding: var(--Em-500);
+}
+
+.hero-container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.hero-text {
+	text-align: center;
+}
+
+.url-shorten {
+	display: flex;
+	flex-direction: column;
+	padding: var(--Em-500);
+	background-color: var(--Purple-700);
+}
+
+.statistics {
+	text-align: center;
+}
+
+.features-container {
+}
+
+.feature-card {
+	text-align: center;
+}
+
+.boost-links {
+	text-align: center;
+}
+
+footer {
+	width: 100%;
+	padding: var(--Em-500);
+	text-align: center;
+	background-color: var(--Purple-900);
+}
+
+.social-links-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Utility */
+.hidden {
+	display: none;
+}
+
+.invert {
+	color: var(--Neutral-100);
+}
+
+.bold {
+	font-weight: var(--Font-Weight-700);
+}
+
+.white {
+	color: var(--Neutral-100);
+}
+
+/* Element */
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+p {
+}
+
+ul {
+}
+
+li {
+	list-style: none;
+	font-weight: 500;
+	color: var(--Neutral-300);
+}
+
+img {
+	max-width: 100%;
+}
+
+.hamburger {
+	width: 25px;
+	height: 3px;
+	background-color: var(--Neutral-300);
+	margin: 5px 0;
+}
+.brand {
+}
+
+.records {
+}
+
+.customizable {
+}
+
+.site-links {
+	display: flex;
+}
+/* Exception */
+/* media */
