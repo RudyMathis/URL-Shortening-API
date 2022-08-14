@@ -45,6 +45,7 @@ body {
 }
 
 header {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -53,6 +54,15 @@ header {
 }
 
 nav {
+	position: absolute;
+	top: 100%;
+	left: var(--Em-500);
+	width: calc(100% - var(--Em-500) * 2);
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--Purple-700);
+	border-radius: var(--Em-300);
 }
 
 .hamburger-menu {
@@ -60,6 +70,21 @@ nav {
 }
 
 .hamburger-wrapper {
+}
+
+.login-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: var(--Em-500);
+}
+
+.login {
+	padding-top: var(--Em-700);
+	border-top: 1px solid var(--Neutral-300);
+	width: 80%;
+	background-color: transparent;
+	font-size: var(--Rem-400);
 }
 
 main {
@@ -81,6 +106,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	padding: var(--Em-500);
+	background-image: url(./images/bg-shorten-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: top -30px right -50%;
 	background-color: var(--Purple-700);
 	border-radius: var(--Em-300);
 }
@@ -93,6 +121,7 @@ main {
 }
 
 .statistics {
+	margin-top: 4em;
 	text-align: center;
 }
 
@@ -139,6 +168,7 @@ footer {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	margin-top: var(--Em-900);
 }
 
 /* Utility */
@@ -160,6 +190,24 @@ footer {
 
 .blue-background {
 	background-color: var(--Blue-500);
+}
+
+.blue-background:hover,
+.blue-background:focus-visible {
+	filter: brightness(115%);
+}
+
+.blue-hover:hover,
+.blue-hover:focus-visible {
+	cursor: pointer;
+	color: var(--Blue-500);
+	fill: var(--Blue-500);
+}
+
+.purple-hover:hover,
+.purple-hover:focus-visible {
+	cursor: pointer;
+	color: var(--Purple-900);
 }
 
 /* Element */
@@ -189,14 +237,17 @@ ul {
 }
 
 li {
+	width: max-content;
 	list-style: none;
 	font-weight: 500;
 	color: var(--Neutral-300);
-	margin: var(--Rem-200) 0;
+	margin: var(--Rem-200) auto;
 }
 
 button {
+	margin: var(--Em-500) 0;
 	border: none;
+	cursor: pointer;
 }
 
 img {
@@ -214,34 +265,29 @@ a {
 	margin: 5px 0;
 }
 
-.brand {
-}
-
-.records {
-}
-
-.customizable {
-}
-
 .icons {
 	position: absolute;
 	top: -10%;
 	left: calc(50% + -38px);
 	background-color: var(--Purple-700);
-	border-radius: 50%;
-	padding: var(--Em-300);
+	padding: var(--Em-500);
 	width: 76px;
+	clip-path: circle(50% at 50% 50%);
+	-webkit-clip-path: circle(50% at 50% 50%);
 }
 
 .site-links {
 	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: var(--Rem-600) 0 0 0;
 }
 
 .get-started-sign-up {
-	background-color: var(--Blue-500);
 	color: var(--Neutral-100);
 	border-radius: 99px;
 	padding: var(--Em-500) var(--Em-900);
+	width: 55%;
 }
 /* Exception */
 .working {
@@ -254,3 +300,12 @@ a {
 	background-size: cover;
 }
 /* media */
+
+.brand {
+}
+
+.records {
+}
+
+.customizable {
+}
