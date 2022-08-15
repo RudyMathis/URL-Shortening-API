@@ -69,9 +69,6 @@ nav {
 	cursor: pointer;
 }
 
-.hamburger-wrapper {
-}
-
 .login-container {
 	display: flex;
 	flex-direction: column;
@@ -305,12 +302,60 @@ a {
 /* media */
 
 @media (min-width: 1024px) {
+	.hidden {
+		display: flex;
+	}
+
+	nav {
+		display: flex;
+		position: relative;
+		left: initial;
+		width: initial;
+		z-index: 1;
+		flex-direction: row;
+		background-color: transparent;
+		border-radius: initial;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	nav > ul > li {
+		margin: 0 var(--Rem-400);
+	}
+	.hamburger-wrapper {
+		display: none;
+	}
+
+	.site-links {
+		flex-direction: row;
+		margin: 0;
+	}
+
+	.site-links > li {
+		color: var(--Neutral-300);
+	}
+
+	.login-container {
+		flex-direction: row;
+		margin: 0;
+		margin-left: 20%;
+	}
+
+	.login {
+		padding-top: initial;
+		border-top: none;
+		width: 80%;
+		background-color: transparent;
+		font-size: var(--Rem-400);
+		color: var(--Neutral-300);
+	}
+
 	header {
 		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		max-width: 47em;
+		justify-content: initial;
+		width: 47em;
 		padding: var(--Em-500);
 	}
 
@@ -322,6 +367,10 @@ a {
 
 	.hero-text {
 		text-align: left;
+	}
+
+	.get-started-sign-up {
+		width: 12em;
 	}
 
 	main {
@@ -392,7 +441,6 @@ a {
 		text-align: left;
 		max-width: 47em;
 		margin: auto;
-		text-align: left;
 		padding: var(--Em-900) 0;
 	}
 
@@ -410,5 +458,9 @@ a {
 		align-items: center;
 		justify-content: center;
 		margin-top: var(--Rem-200);
+	}
+
+	.icons {
+		left: 38px;
 	}
 }
