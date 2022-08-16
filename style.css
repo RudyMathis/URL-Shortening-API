@@ -115,6 +115,7 @@ main {
 	border-radius: var(--Em-100);
 	padding: var(--Em-300);
 	margin: var(--Em-300) 0;
+	overflow-wrap: break-word;
 }
 
 .link-list {
