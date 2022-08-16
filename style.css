@@ -382,6 +382,7 @@ a {
 		background-image: url(./images/bg-shorten-desktop.svg);
 		background-position: top 0 right 0;
 	}
+
 	.shorten {
 		width: 80%;
 	}
@@ -438,10 +439,14 @@ a {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		text-align: left;
 		max-width: 47em;
 		margin: auto;
 		padding: var(--Em-900) 0;
+	}
+
+	li {
+		margin: var(--Rem-200) 0;
+		text-align: left;
 	}
 
 	.footer-wrapper > svg {
