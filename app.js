@@ -1,18 +1,21 @@
-const menuBtn = document.querySelector(".hamburger-wrapper");
+const menu = () => {
+	const menuBtn = document.querySelector(".hamburger-wrapper");
 
-menuBtn.addEventListener("click", () => {
-	const nav = document.querySelector("nav");
-	nav.classList.toggle("hidden");
-});
+	menuBtn.addEventListener("click", () => {
+		const nav = document.querySelector("nav");
+		nav.classList.toggle("hidden");
+	});
+};
+menu();
 
 // api
-const shortenBtn = document.querySelector("#shorten-btn");
-const shortLinksList = document.querySelector("#short-links-list");
 const urlInput = document.querySelector("#url-input");
 
 const shortBtn = () => {
+	const shortenBtn = document.querySelector("#shorten-btn");
 	shortenBtn.addEventListener("click", () => {
 		if (!urlInput.value == "") {
+			const shortLinksList = document.querySelector("#short-links-list");
 			const fragment = document.createDocumentFragment();
 			const div = fragment.appendChild(document.createElement("div"));
 			const p = fragment.appendChild(document.createElement("p"));
@@ -66,21 +69,19 @@ urlInput.addEventListener("input", () => {
 		/^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
 
 	const invalid = document.querySelector(".invalid");
-	// if (urlInput.value == "hello") {
-	// 	shortBtn();
-	// } else {
-	// 	invalid.textContent = "Please add a link";
-	// }
+	const shorten = document.querySelector(".shorten");
+
 	if (urlInput.value.match(regex)) {
 		shortBtn();
 	} else {
+		shorten.style.color = "var(--Red-400)";
+		shorten.style.outline = "2px solid var(--Red-400)";
 		invalid.textContent = "Please add a link";
 	}
 
 	if (urlInput.value == "") {
+		shorten.style.color = "var(--Purple-900";
+		shorten.style.outline = "none";
 		invalid.textContent = "";
 	}
-	console.log(urlInput.value);
 });
-
-// fetch
